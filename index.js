@@ -1,16 +1,14 @@
 port = process.env.PORT || 8000
 express = require("express")
 app = express()
-//server = require("http").createServer(app)
-excel = require("xlsx")
+fs = require("fs")
 sql = require("mysql2")
 bodyParser = require('body-parser');
-//1212
 //app.use(bodyParser.json());
 app.use(express.json());
 
-data = excel.readFile('WКопия База данных ПП.xlsx')
-datas = excel.utils.sheet_to_json(data.Sheets[data.SheetNames[1]])
+//data = excel.readFile('WКопия База данных ПП.xlsx')
+//datas = excel.utils.sheet_to_json(data.Sheets[data.SheetNames[1]])
 
 conn = sql.createConnection({
     host: "192.168.88.128",
@@ -43,6 +41,24 @@ app.get("/main", (res, req) => {
 
 app.use("/lk", express.static(__dirname + "/sites/lk/"))
 app.use("/pp", express.static(__dirname + "/sites/pp/"))
+app.use("/", express.static(__dirname + "/sites/pp/"))
+app.use("/", express.static(__dirname + "/sites/pp/pps"))
+app.get('/ppi', (res,req) => {
+    console.log("pp")
+    fs.readFile("./sites/pp/pps/ppi.html", "utf8",(err,data)=>{
+    points.forEach(function(item, index, array) {
+        if(item['Наименование ПП']===res.query.ppn.split(' ')[1] && item['Вид']==="АПП"){ 
+            data = data.replace("{adress}", item.Адрес )
+            
+            req.end(data)
+        }
+      });
+      
+    
+       
+        //req.sendFile(__dirname + "/sites/pp/pps/"+res.query.ppn+".html")
+    })
+})
 
 
 app.get("/points", (res, req) => {
