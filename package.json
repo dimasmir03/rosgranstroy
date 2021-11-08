@@ -1,0 +1,29 @@
+{
+  "name": "granica",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "start": "node index"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.2",
+    "nodemon": "^2.0.14",
+    "xlsx": "^0.17.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimasmir03/hakaton.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dimasmir03/hakaton/issues"
+  },
+  "homepage": "https://github.com/dimasmir03/hakaton#readme",
+  "description": ""
+}

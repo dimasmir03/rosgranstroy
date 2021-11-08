@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>
+    Личный кабинет
+  </title>
+  <link rel="stylesheet" href="./styles/fonts.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__text">Личный кабинет</div>
+    <nav class="header__menu menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span class="menu__icon"></span>
+      </label>
+      <div class="menu__box">
+        <a class="menu__item" href="../main/main.html">Карта</a>
+        <a class="menu__item" href="../pp/pp.html">Пункты пропуска</a>
+      </div>
+    </nav>
+  </header>
+  <div class="block">
+    <div class="block__photo"></div>
+    <p class="block__text">Бабушкин<br>Роман Владимирович</p>
+  </div>
+  <div class="block">
+    <p class="block__header">Документы</p>
+    <div class="help__box">
+      <p class="block__text_left">Добавить фото паспорта:</p>
+      <form id="upload-container" method="POST">
+        <div>
+          <input id="file-input" type="file" name="file" multiple>
+          <label for="file-input" class="block__button">Выберите файл</label>
+          <input type="submit" value="Отправить" class="block__input">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="block3">
+    <p class="block__header">Данные об автомобиле</p>
+    <div class="block2__desc_text">Марка авто: <span class="block2__desc_date">Kia Rio</span></div>
+    <div class="block2__desc_text">Цвет авто: <span class="block2__desc_date">Серый</span></div>
+    <div class="block2__desc_text">Госномер авто: <span class="block2__desc_date">о 000 оо 777</span></div> 
+    <p class="block__text_left">Добавить фото СТС:</p>
+      <form id="upload-container" method="POST">
+        <div>
+          <input id="file-input" type="file" name="file" multiple>
+          <label for="file-input" class="block__button">Выберите файл</label>
+          <input type="submit" value="Отправить" class="block__input">
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="block">
+    <p class="block__header">Посещенные пункты пропуска:</p>
+    <div class="block2" id="brus">
+      <div class="block2__pic"></div>
+      <div class="block2__desc"> 
+        <div class="block2__desc_text">АПП Брусничное</div>
+        <div class="block2__desc_text">Дата посещения: <p class="block2__desc_date">12.07.2021</p></div>
+      </div>
+    </div>
+    <div class="block2" id="ivan">
+      <div class="block2__pic"></div>
+      <div class="block2__desc"> 
+        <div class="block2__desc_text">АПП Ивангород</div>
+        <div class="block2__desc_text">Дата посещения: <p class="block2__desc_date">01.02.2020</p></div>
+      </div>
+    </div>
+    <div class="block2" id="lut">
+      <div class="block2__pic"></div>
+      <div class="block2__desc"> 
+        <div class="block2__desc_text">АПП Люття</div>
+        <div class="block2__desc_text">Дата посещения: <p class="block2__desc_date">27.09.2021</p></div>
+      </div>
+    </div>
+    <div class="block2" id="svet">
+      <div class="block2__pic"></div>
+      <div class="block2__desc"> 
+        <div class="block2__desc_text">АПП Светогорск</div>
+        <div class="block2__desc_text">Дата посещения: <p class="block2__desc_date">18.04.2019</p></div>
+      </div>
+    </div>
+    <div class="block2" id="tor">
+      <div class="block2__pic"></div>
+      <div class="block2__desc"> 
+        <div class="block2__desc_text">АПП Торфяновка</div>
+        <div class="block2__desc_text">Дата посещения: <p class="block2__desc_date">21.05.2018</p></div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+  </footer>
+  <script src="./lk.js"></script>
+</body>
+</html>

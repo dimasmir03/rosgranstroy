@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Авторизация</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./log.css">
+	<link rel="stylesheet" href="../lk/styles/fonts.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body>
+		<div class="container" >
+					<div class="form-title">
+						Авторизация
+					</div>
+					<div class="wrap-input" data-validate = "Enter username">
+						<input class="input" id="name" type="text" name="name" placeholder="Имя пользователя">
+					</div>
+					<div class="wrap-input validate-input" data-validate="Enter password">
+						<input class="input" id="pass" type="password" name="pass" placeholder="Пароль">
+					</div>
+
+					<div class="form-checkbox">
+						<input class="input-checkbox" id="ckb1" type="checkbox" name="remember-me">
+						<label class="label-checkbox" for="ckb1">
+							Запомнить меня
+						</label>
+					</div>
+					<button id="btn_log" class="form-btn">
+						Войти
+					</button>
+					<button class="btn_reg" id="btn_reg" >
+						Регистрация
+					</button>
+					<a class="txt" href="#">
+						Забыли пароль?
+					</a>
+		</div>
+		<script src="./log.js"></script>
+</body>
+</html>

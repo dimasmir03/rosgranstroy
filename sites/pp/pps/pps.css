@@ -1,0 +1,152 @@
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: #f7f5f5;
+}
+
+@media (min-width:320px) {
+   .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f5f5;
+    height: 72px;
+  }
+
+  .header__text {
+    display: block;
+    margin: auto;
+    font-size: 25px;
+    color: rgb(55, 153, 222);
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Gotham Pro Bold';
+  }
+
+  #menu__toggle {
+    opacity: 0;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top:30px;
+    left: calc(50% - 41px/2 + 145px);
+    width: 35px;
+    height: 16px;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .menu__btn>.menu__icon {
+    display: block;
+    position: absolute;
+    background: rgb(55, 153, 222);
+    top: 0px;
+    width: 100%;
+    height: 5px;
+    transition-duration: .5s;
+  }
+
+  .menu__btn>.menu__icon::after {
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 6px;
+    top: 10px;
+    background: rgb(55, 153, 222);
+    transition-duration: .5s;
+    content: '';
+  }
+
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background: white;
+    transition-duration: .5s;
+    z-index: 2;
+  }
+
+  .menu__item {
+    font-family: 'Gotham Pro Bold';
+    text-transform: uppercase;
+    display: block;
+    padding: 12px 24px;
+    color: rgb(55, 153, 222);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .5s;
+  }
+
+  .menu__item:hover {
+    background: rgb(55, 153, 222);
+    color: white;
+  }
+
+  #menu__toggle:checked~.menu__btn>.menu__icon {
+    transform: rotate(45deg);
+    top: 8px;
+    height: 5px;
+  }
+
+  #menu__toggle:checked~.menu__btn>.menu__icon::after {
+    transform: rotate(90deg);
+    top: 0px;
+    height: 5px;
+  }
+
+  #menu__toggle:checked~.menu__box {
+    visibility: visible;
+    left: 0;
+  }
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    margin-left: 13px;
+    margin-right: 13px;
+    padding-bottom: 10px;
+  }
+
+  .pp__pic {
+    background: url(../pic/noimg.jpg) no-repeat;
+    background-size: contain;
+    width: 85vw;
+    height: 85vw;
+    margin: auto;
+    margin-top: 15px;
+  }
+
+  .pp__text {
+    color: rgb(55, 153, 222);
+    font-family: 'Gotham Pro Bold';
+    margin-left: 15px;
+    font-size: 21px;
+    margin-bottom: 10px;
+    margin-top: 10px; 
+  }
+
+  .pp__desc {
+    font-family: 'Gotham Pro Regular';
+    margin-left: 20px;
+    font-size: 19px;
+  }
+}
