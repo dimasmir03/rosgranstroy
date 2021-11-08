@@ -5,7 +5,7 @@ app = express()
 excel = require("xlsx")
 sql = require("mysql2")
 bodyParser = require('body-parser');
-
+//1212
 //app.use(bodyParser.json());
 app.use(express.json());
 
