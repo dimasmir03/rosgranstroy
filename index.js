@@ -49,6 +49,10 @@ app.get('/ppi', (res,req) => {
     points.forEach(function(item, index, array) {
         if(item['Наименование ПП']===res.query.ppn.split(' ')[1] && item['Вид']==="АПП"){ 
             data = data.replace("{adress}", item.Адрес )
+            .replace("{time}", "круглосуточно" )
+            .replace("{npp}", item['Наименование ПП'] )
+            .replace("{state}", item['Сопредельное государство'] )
+            .replace("{spp}", item['Сопредельный ПП'] )
             
             req.end(data)
         }
